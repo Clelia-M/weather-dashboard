@@ -96,15 +96,15 @@ function getForecast(city) {
             var forecastWind = "Wind: " + forecast.wind.speed + " mph";
 
             // var to append pieces of info 
-            var forecastRow = $("<div>").addClass("forecast-row card text-left p-3");
+            var forecastRow = $("<div>").addClass("forecast-row card text-left p-2");
             // date append
-            forecastRow.append($("<h6>").addClass("card-title text-left p-2").text(formattedDate));
+            forecastRow.append($("<h6>").addClass("card-title text-left p-1").text(formattedDate));
             // temperature append
-            forecastRow.append($("<p>").addClass("card-text text-left p-2").text(forecastTemp));
+            forecastRow.append($("<p>").addClass("card-text text-left p-1").text(forecastTemp));
             // wind append
-            forecastRow.append($("<p>").addClass("card-title text-left p-2").text(forecastWind));
+            forecastRow.append($("<p>").addClass("card-text text-left p-1").text(forecastWind));
             // humidity append
-            forecastRow.append($("<p>").addClass("card-text text-left p-2").text(forecastHumidity));
+            forecastRow.append($("<p>").addClass("card-text text-left p-1").text(forecastHumidity));
             forecastDiv.append(forecastRow);
             // count++;
         }

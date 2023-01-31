@@ -24,3 +24,7 @@
     background-color: #2D3E51;
     color: #fff;
 }
+
+.card-deck .card p {
+    font-size: 14px;
+}
