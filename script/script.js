@@ -85,5 +85,14 @@ $("#search-form").submit(function (event) {
             if (count >= 5) {
               break;
             }
+
+        // date
+        var formattedDate = forecastDate.toLocaleDateString();       
+        // temperature
+        var forecastTemp = "Temp: " + forecast.main.temp + " °C";
+        // humidity
+        var forecastHumidity = "Humidity: " + forecast.main.humidity + " %";
+        // wind
+        var forecastWind = "Wind: " + forecast.wind.speed + " mph";
  }
 })};
