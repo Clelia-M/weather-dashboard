@@ -3,7 +3,19 @@
     background: linear-gradient(90deg, rgba(52, 98, 187, 1) 0%, rgba(42, 54, 132, 1) 54%, rgba(32, 9, 77, 1) 100%);
 }
 
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: column;
+}
+
+.input-group-append {
+    width: 100%;
+}
+
 #search-button {
     background-color: #5098E5;
     color: white;
+    margin-top: 10px;
+    width: 100%;
 }
