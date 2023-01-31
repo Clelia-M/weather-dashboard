@@ -51,5 +51,11 @@ function getWeather(city) {
 
 
 // Get the geographical coordinates of the city
+$("#search-form").submit(function (event) {
+    event.preventDefault();
+    var city = $("#search-input").val();
+    getForecast(city);
+});
+
 
 // Function to get weather for the next 5 days
