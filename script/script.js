@@ -60,4 +60,30 @@ $("#search-form").submit(function (event) {
 // Function to get weather for the next 5 days
  function getForecast(city) {
     var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=metric";
+
+    // jQuery to send GET request to OpenWeatherMap API
+    // Data returned from the API is passed in a function as the parameter "data"
+    $.getJSON(forecastUrl, function (forecastData) {
+
+        // var for the card deck next 5 days with bootstrap card styile
+        var forecastDiv = $("<div>").addClass("card-deck p-3");
+        // var to loop trough the array of days
+        var forecastArray = forecastData.list;
+        // var to set the current date
+        var currentDate = new Date();
+        // var to start from tomorrow
+        var tomorrow = new Date(currentDate.getTime() + 24 * 60 * 60 * 1000);
+        var count = 0;
+
+        // for loop to go through the array of days and count the next 5 excluding today
+        for (var i = 0; i < forecastArray.length; i += 8) {
+            var forecast = forecastArray[i];
+            var forecastDate = new Date(forecast.dt * 1000);
+            if (forecastDate < tomorrow) {
+              continue;
+            }
+            if (count >= 5) {
+              break;
+            }
  }
+})};
