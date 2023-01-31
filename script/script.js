@@ -57,5 +57,7 @@ $("#search-form").submit(function (event) {
     getForecast(city);
 });
 
-
 // Function to get weather for the next 5 days
+ function getForecast(city) {
+    var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=metric";
+ }
