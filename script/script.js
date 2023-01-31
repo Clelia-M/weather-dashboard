@@ -31,18 +31,18 @@ function getWeather(city) {
             "@2x.png";
         // Create a string of HTML that will be used to display the weather data on the page
         var todayHtml =
-        // City name
-        "<h2>" + today.name + " - " +
-        // Date of today
-        moment().format("MMMM Do YYYY") + "</h2>" +
-        // Weather icon
-        "<img src='" + todayIcon + "'>" +
-        // Temperature
-        "<p>Temperature: " + (today.main.temp).toFixed(2) + "°C</p>" +
-        // Humidity
-        "<p>Humidity: " + today.main.humidity + "%</p>" +
-        // Wind Speed
-        "<p>Wind: " + today.wind.speed + "mph </p>";
+            // City name
+            "<h2>" + today.name + " - " +
+            // Date of today
+            moment().format("MMMM Do YYYY") + "</h2>" +
+            // Weather icon
+            "<img src='" + todayIcon + "'>" +
+            // Temperature
+            "<p>Temperature: " + (today.main.temp).toFixed(2) + "°C</p>" +
+            // Humidity
+            "<p>Humidity: " + today.main.humidity + "%</p>" +
+            // Wind Speed
+            "<p>Wind: " + today.wind.speed + "mph </p>";
 
         // Update the content of an HTML element with the ID "today" with the HTML string created
         $("#today").html(todayHtml);
@@ -58,7 +58,7 @@ $("#search-form").submit(function (event) {
 });
 
 // Function to get weather for the next 5 days
- function getForecast(city) {
+function getForecast(city) {
     var forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=metric";
 
     // jQuery to send GET request to OpenWeatherMap API
@@ -80,32 +80,37 @@ $("#search-form").submit(function (event) {
             var forecast = forecastArray[i];
             var forecastDate = new Date(forecast.dt * 1000);
             if (forecastDate < tomorrow) {
-              continue;
+                continue;
             }
             if (count >= 5) {
-              break;
+                break;
             }
 
-        // date
-        var formattedDate = forecastDate.toLocaleDateString();       
-        // temperature
-        var forecastTemp = "Temp: " + forecast.main.temp + " °C";
-        // humidity
-        var forecastHumidity = "Humidity: " + forecast.main.humidity + " %";
-        // wind
-        var forecastWind = "Wind: " + forecast.wind.speed + " mph";
-        
-        // var to append pieces of info 
-        var forecastRow = $("<div>").addClass("forecast-row card text-left p-3");
-        // date append
-        forecastRow.append($("<h6>").addClass("card-title text-left p-2").text(formattedDate));
-        // temperature append
-        forecastRow.append($("<p>").addClass("card-text text-left p-2").text(forecastTemp));
-        // wind append
-        forecastRow.append($("<p>").addClass("card-title text-left p-2").text(forecastWind));
-        // humidity append
-        forecastRow.append($("<p>").addClass("card-text text-left p-2").text(forecastHumidity));
-        forecastDiv.append(forecastRow);
-        // count++;
- }
-})};
+            // date
+            var formattedDate = forecastDate.toLocaleDateString();
+            // temperature
+            var forecastTemp = "Temp: " + forecast.main.temp + " °C";
+            // humidity
+            var forecastHumidity = "Humidity: " + forecast.main.humidity + " %";
+            // wind
+            var forecastWind = "Wind: " + forecast.wind.speed + " mph";
+
+            // var to append pieces of info 
+            var forecastRow = $("<div>").addClass("forecast-row card text-left p-3");
+            // date append
+            forecastRow.append($("<h6>").addClass("card-title text-left p-2").text(formattedDate));
+            // temperature append
+            forecastRow.append($("<p>").addClass("card-text text-left p-2").text(forecastTemp));
+            // wind append
+            forecastRow.append($("<p>").addClass("card-title text-left p-2").text(forecastWind));
+            // humidity append
+            forecastRow.append($("<p>").addClass("card-text text-left p-2").text(forecastHumidity));
+            forecastDiv.append(forecastRow);
+            // count++;
+        }
+
+        var forecastTitle = "<h2>5 Days-Forecast:</h2>";
+        $("#forecast").prepend(forecastTitle);
+        $("#forecast").append(forecastDiv);
+    });
+};
