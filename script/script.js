@@ -50,6 +50,6 @@ function getWeather(city) {
 }
 
 
-// Get the gepgraphical coordinates of the city
+// Get the geographical coordinates of the city
 
 // Function to get weather for the next 5 days

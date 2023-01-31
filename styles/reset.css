@@ -1,0 +1,9 @@
+.weather-header {
+    background: rgb(52, 98, 187);
+    background: linear-gradient(90deg, rgba(52, 98, 187, 1) 0%, rgba(42, 54, 132, 1) 54%, rgba(32, 9, 77, 1) 100%);
+}
+
+#search-button {
+    background-color: #5098E5;
+    color: white;
+}
