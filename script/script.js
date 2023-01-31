@@ -9,6 +9,17 @@ $("#search-form").submit(function (event) {
 });
 
 // Function to get weather for TODAY
+function getWeather(city) {
+    // Get weather data for a city for TODAY
+    var todayUrl =
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
+    city +
+    "&appid=" +
+    apiKey +
+    // units = metric used to have Celsius instead of Kelvin that is the Openweather standard
+    "&units=metric";
+}
+
 
 // Get the gepgraphical ccordinates of the city
 
