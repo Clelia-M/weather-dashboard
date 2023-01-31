@@ -94,5 +94,18 @@ $("#search-form").submit(function (event) {
         var forecastHumidity = "Humidity: " + forecast.main.humidity + " %";
         // wind
         var forecastWind = "Wind: " + forecast.wind.speed + " mph";
+        
+        // var to append pieces of info 
+        var forecastRow = $("<div>").addClass("forecast-row card text-left p-3");
+        // date append
+        forecastRow.append($("<h6>").addClass("card-title text-left p-2").text(formattedDate));
+        // temperature append
+        forecastRow.append($("<p>").addClass("card-text text-left p-2").text(forecastTemp));
+        // wind append
+        forecastRow.append($("<p>").addClass("card-title text-left p-2").text(forecastWind));
+        // humidity append
+        forecastRow.append($("<p>").addClass("card-text text-left p-2").text(forecastHumidity));
+        forecastDiv.append(forecastRow);
+        // count++;
  }
 })};
