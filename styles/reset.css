@@ -19,3 +19,8 @@
     margin-top: 10px;
     width: 100%;
 }
+
+.card-deck .card {
+    background-color: #2D3E51;
+    color: #fff;
+}
