@@ -37,6 +37,12 @@ function getWeather(city) {
         moment().format("MMMM Do YYYY") + "</h2>" +
         // Weather icon
         "<img src='" + todayIcon + "'>"
+        // Temperature
+        "<p>Temperature: " + (today.main.temp).toFixed(2) + "°C</p>" +
+        // Humidity
+        "<p>Humidity: " + today.main.humidity + "%</p>" +
+        // Wind Speed
+        "<p>Wind: " + today.wind.speed + "mph </p>";
 
         // Update the content of an HTML element with the ID "today" with the HTML string created
     }
