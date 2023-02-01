@@ -1,6 +1,7 @@
 .weather-header {
     background: rgb(52, 98, 187);
     background: linear-gradient(90deg, rgba(52, 98, 187, 1) 0%, rgba(42, 54, 132, 1) 54%, rgba(32, 9, 77, 1) 100%);
+    margin-bottom: 20px;
 }
 
 .input-group {
@@ -34,3 +35,12 @@
     border: 1px solid black;
     padding: 20px;
 }
+
+/* Icon CSS to float on the same line as the text
+.weather-icon {
+    /* width: 40px; */
+    /* height: 40px; */
+    /* float: right; */
+    /* margin-right: 250px;
+    margin-bottom: 5000px;
+} */

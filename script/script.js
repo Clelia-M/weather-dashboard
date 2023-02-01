@@ -37,7 +37,7 @@ function getWeather(city) {
             (new Date().toLocaleDateString("en-GB", {day: "2-digit", month: "2-digit", year: "numeric"}))
             + ")" + "</h2>" +
             // Weather icon
-            "<img src='" + todayIcon + "'>" +
+            "<img class='weather-icon' src='" + todayIcon + "'>" + 
             // Temperature
             "<p>Temperature: " + (today.main.temp).toFixed(2) + "°C</p>" +
             // Humidity
