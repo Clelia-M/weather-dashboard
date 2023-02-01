@@ -22,7 +22,7 @@ It has been created by modifying a given HTML starter code and it is the challen
 
 
 ## Link to deployed Application
-[Weather Dashboard Application](https://clelia-m.github.io/codequiz/index.html)
+[Weather Dashboard Application](https://clelia-m.github.io/weather-dashboard/)
 
 ## Final Results
-![Start page](https://github.com/Clelia-M/codequiz/blob/55ae8566c694d36ba37c01c7ae59635e36a50be8/app%20final/1_Start%20page.png)
+![Start page](https://github.com/Clelia-M/weather-dashboard/blob/1eb571d96b5d059a5577e1f0d3d13b28d82a16ab/assets/Weather%20Dashboard%20Application.png)
