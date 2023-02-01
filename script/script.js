@@ -110,7 +110,7 @@ function getForecast(city) {
             // count++;
         }
 
-        var forecastTitle = $("<h2>").text("5 Days-Forecast: ").addClass("p-3");
+        var forecastTitle = $("<h2>").text("5 Day-Forecast: ").addClass("p-3");
         var titleContainer = $("<div>").addClass("d-flex");
         titleContainer.append(forecastTitle);
 
