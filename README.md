@@ -25,4 +25,4 @@ It has been created by modifying a given HTML starter code and it is the challen
 [Weather Dashboard Application](https://clelia-m.github.io/weather-dashboard/)
 
 ## Final Results
-![Start page](https://github.com/Clelia-M/weather-dashboard/blob/1eb571d96b5d059a5577e1f0d3d13b28d82a16ab/assets/Weather%20Dashboard%20Application.png)
+![Start page](https://github.com/Clelia-M/weather-dashboard/blob/1cb7eeda7bbbd815ab07fbb74344fdc19edc543e/assets/Weather%20dashboard%20App.png)
