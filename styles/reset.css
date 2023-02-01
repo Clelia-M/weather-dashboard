@@ -28,3 +28,9 @@
 .card-deck .card p {
     font-size: 14px;
 }
+
+/* Today section border only when content is within it */
+#today:not(:empty) {
+    border: 1px solid black;
+    padding: 20px;
+}
