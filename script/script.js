@@ -89,6 +89,8 @@ function getForecast(city) {
 
             // date
             var formattedDate = forecastDate.toLocaleDateString();
+            // Icon URL
+            var forecastIcon = "https://openweathermap.org/img/wn/" + forecast.weather[0].icon + "@2x.png";
             // temperature
             var forecastTemp = "Temp: " + forecast.main.temp + " °C";
             // humidity
@@ -100,6 +102,8 @@ function getForecast(city) {
             var forecastRow = $("<div>").addClass("forecast-row card text-left p-2");
             // date append
             forecastRow.append($("<h6>").addClass("card-title text-left p-1").text(formattedDate));
+            // icon 
+            forecastRow.append($("<img>").addClass("weather-icon").attr("src", forecastIcon));
             // temperature append
             forecastRow.append($("<p>").addClass("card-text text-left p-1").text(forecastTemp));
             // wind append
