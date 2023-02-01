@@ -99,7 +99,7 @@ function getForecast(city) {
             var forecastWind = "Wind: " + forecast.wind.speed + " mph";
 
             // var to append pieces of info 
-            var forecastRow = $("<div>").addClass("forecast-row card text-left p-2");
+            var forecastRow = $("<div>").addClass("forecast-row card text-left p-2 wide-card");
             // date append
             forecastRow.append($("<h6>").addClass("card-title text-left p-1").text(formattedDate));
             // icon 

@@ -35,7 +35,10 @@
     color: #fff;
     border: 1px solid black;
     border-radius: 0px;
-    width: auto;
+}
+
+.wide-card {
+    width: 500px;
 }
 
 .card-deck .card p {
