@@ -32,9 +32,10 @@ function getWeather(city) {
         // Create a string of HTML that will be used to display the weather data on the page
         var todayHtml =
             // City name
-            "<h2>" + today.name + " - " +
+            "<h2>" + today.name + " (" +
             // Date of today
-            moment().format("MMMM Do YYYY") + "</h2>" +
+            (new Date().toLocaleDateString("en-GB", {day: "2-digit", month: "2-digit", year: "numeric"}))
+            + ")" + "</h2>" +
             // Weather icon
             "<img src='" + todayIcon + "'>" +
             // Temperature
