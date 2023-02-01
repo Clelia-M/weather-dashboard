@@ -109,8 +109,12 @@ function getForecast(city) {
             // count++;
         }
 
-        var forecastTitle = "<h2>5 Days-Forecast:</h2>";
-        $("#forecast").prepend(forecastTitle);
-        $("#forecast").append(forecastDiv);
+        var forecastTitle = $("<h2>").text("5 Days-Forecast: ").addClass("p-3");
+        var titleContainer = $("<div>").addClass("d-flex");
+        titleContainer.append(forecastTitle);
+
+        var forecastContainer = $("<div>").addClass("d-flex flex-column");
+        forecastContainer.append(titleContainer).append(forecastDiv);
+        $("#forecast").html(forecastContainer);
     });
 };
