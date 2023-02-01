@@ -45,11 +45,11 @@
     padding: 20px;
 }
 
-/* Icon CSS to float on the same line as the text
+.weather-title {
+    display: flex;
+}
+
 .weather-icon {
-    /* width: 40px; */
-    /* height: 40px; */
-    /* float: right; */
-    /* margin-right: 250px;
-    margin-bottom: 5000px;
-} */
+    width: 70px;
+    margin-top: -15px;
+}
